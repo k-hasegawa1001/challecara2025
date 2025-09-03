@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Q_1aTcnOIfamH0o6_-4i" name="ページ1">
-        <mxGraphModel dx="2204" dy="1298" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2481" dy="709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -248,11 +248,11 @@
                 <mxCell id="81" style="edgeStyle=none;html=1;entryX=0.364;entryY=1.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="80" target="26">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="ミュート" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="83" value="ミュート確認" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
                     <mxGeometry x="1050" y="340" width="100" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="84" value="ブロック" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
-                    <mxGeometry x="1100" y="250" width="100" height="50" as="geometry"/>
+                <mxCell id="84" value="ブロック確認" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+                    <mxGeometry x="1101" y="250" width="100" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="85" style="edgeStyle=none;html=1;entryX=0.207;entryY=-0.04;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="26" target="83">
                     <mxGeometry relative="1" as="geometry"/>
