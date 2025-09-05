@@ -1,0 +1,20 @@
+current directory: C:/Users/k_hasegawa/workspace/challecara2025/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/k_hasegawa/workspace/challecara2025/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250905-4812-bkz0lt sitelibdir\=./.gem.20250905-4812-bkz0lt clean
+
+current directory: C:/Users/k_hasegawa/workspace/challecara2025/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250905-4812-bkz0lt sitelibdir\=./.gem.20250905-4812-bkz0lt
+generating debug-x64-mingw-ucrt.def
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: C:/Users/k_hasegawa/workspace/challecara2025/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250905-4812-bkz0lt sitelibdir\=./.gem.20250905-4812-bkz0lt install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250905-4812-bkz0lt/debug
+
+current directory: C:/Users/k_hasegawa/workspace/challecara2025/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250905-4812-bkz0lt sitelibdir\=./.gem.20250905-4812-bkz0lt clean
