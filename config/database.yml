@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: 1122
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: challecara2025_development
+
+test:
+  <<: *default
+  database: challecara2025_test
+
+production:
+  <<: *default
+  database: challecara2025_production
+  username: admin
+  password: password
