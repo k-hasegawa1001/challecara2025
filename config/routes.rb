@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "geo/get"
   get "posts/create"
   get "posts/view"
   get "users/index"
