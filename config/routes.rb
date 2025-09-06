@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "posts/create"
+  get "posts/view"
   get "users/index"
   get "users/create"
   get "users/login"
