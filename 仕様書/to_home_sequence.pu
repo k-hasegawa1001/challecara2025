@@ -10,9 +10,9 @@ actor ユーザー
 ' アプリを起動してそのままログイン画面に飛ばす場合はindex.ktは省略
 control index.kt
 control create.kt
-control create_execute.rb
+control create_execute_controller.rb
 control login.kt
-control login_execute.rb
+control login_execute_controller.rb
 ' control loginOrCreate.kt
 control home.kt
 
@@ -38,23 +38,23 @@ alt 未ログイン時
             create.kt -> ユーザー: 表示
         else 未入力フィールドなし
             ' create.jsp -> create.kt:
-            create.kt -> create_execute.rb: 起動
-            create_execute.rb -> create_execute.rb: 入力値のチェック
+            create.kt -> create_execute_controller.rb: 起動
+            create_execute_controller.rb -> create_execute_controller.rb: 入力値のチェック
             alt 不正なメールアドレスが入力された場合
-                create_execute.rb -> create.kt
+                create_execute_controller.rb -> create.kt
                 create.kt -> create.kt: 「メールアドレスの形式で入力してください」と表示
                 create.kt -> ユーザー: 表示
             else ユーザーIDが重複していた場合
-                create_execute.rb ->create.kt
+                create_execute_controller.rb ->create.kt
                 create.kt -> create.kt: 「そのIDは使用されています」と表示
                 create.kt -> ユーザー: 表示
             else 問題なく登録できた場合
-                create_execute.rb -> user: 入力された値をDBに保存
-                user --> create_execute.rb
+                create_execute_controller.rb -> user: 入力された値をDBに保存
+                user --> create_execute_controller.rb
 
                 ''''''''' 要相談
                 ' ウェルカムページに遷移
-                create_execute.rb --> create.kt: ユーザーデータと遷移先URL（ウェルカムページかホーム画面）、ログイン状態を保つための認証トークンをJSON形式でレスポンス
+                create_execute_controller.rb --> create.kt: ユーザーデータと遷移先URL（ウェルカムページかホーム画面）、ログイン状態を保つための認証トークンをJSON形式でレスポンス
                 create.kt -> home.kt
                 ' home.kt -> home.jsp
                 home.kt -> ユーザー: 表示
@@ -70,16 +70,16 @@ alt 未ログイン時
             login.kt -> login.kt: 未入力フィールドに「このフィールドを入力してください」を表示
             login.kt -> ユーザー: 表示
         else 未入力フィールドなし
-            login.kt -> login_execute.rb: 起動
-            login_execute.rb -> user: (ID/メールアドレス), パスワードが合致したデータ取得
-            user --> login_execute.rb: ユーザーデータを返却
+            login.kt -> login_execute_controller.rb: 起動
+            login_execute_controller.rb -> user: (ID/メールアドレス), パスワードが合致したデータ取得
+            user --> login_execute_controller.rb: ユーザーデータを返却
 
             alt （ID/メールアドレス）かパスワードのいずれかが不正な場合
-                login_execute.rb -> login.kt
+                login_execute_controller.rb -> login.kt
                 login.kt -> login.kt: 「ID,メールアドレスまたはパスワードが間違っています」と表示
                 login.kt -> ユーザー: 表示
             else 問題なくログインできた場合
-                login_execute.rb --> login.kt: ユーザーデータと遷移先URL（ウェルカムページかホーム画面）、ログイン状態を保つための認証トークンをJSON形式でレスポンス
+                login_execute_controller.rb --> login.kt: ユーザーデータと遷移先URL（ウェルカムページかホーム画面）、ログイン状態を保つための認証トークンをJSON形式でレスポンス
                 login.kt -> home.kt
                 ' home.kt -> home.jsp
                 home.kt -> ユーザー: 表示
