@@ -1,21 +1,17 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: 1122
-  host: localhost
-  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # ↓↓↓ DATABASE_URLがすべての接続情報を管理します ↓↓↓
+  url: <%= ENV.fetch("DATABASE_URL") %>
 
 development:
   <<: *default
-  database: rails_demo_development
 
 test:
   <<: *default
-  database: rails_demo_test
 
 production:
   <<: *default
-  database: rails_demo_production
-  username: admin
-  password: password
+  cable:
+    <<: *default

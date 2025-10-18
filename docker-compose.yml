@@ -1,0 +1,27 @@
+
+services:
+  # PostgreSQLデータベースのサービス
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: password # 任意のパスワードを設定
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Railsアプリケーションのサービス
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev # 開発用のDockerfileを指定
+    volumes:
+      - .:/myapp # コードをリアルタイムで同期
+    depends_on:
+      - db   # dbサービスが起動してからwebを起動
+    ports:
+      - "80:3000" # PCの80番ポートをコンテナの80番ポートに接続
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: postgres://postgres:password@db:5432/challecara2025_production
+
+volumes:
+  postgres_data:
