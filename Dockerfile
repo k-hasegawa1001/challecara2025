@@ -2,8 +2,13 @@
 # check=error=true
 
 # This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
+<<<<<<< HEAD
 # docker build -t rails_demo .
 # docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name rails_demo rails_demo
+=======
+# docker build -t challecara2025 .
+# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name challecara2025 challecara2025
+>>>>>>> 4c63380282d579f2cec115526c12520dc149bce3
 
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
 
