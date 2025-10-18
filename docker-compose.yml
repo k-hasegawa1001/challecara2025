@@ -2,7 +2,7 @@
 services:
   # PostgreSQLデータベースのサービス
   db:
-    image: postgres:15
+    image: postgis/postgis:15-3.4
     environment:
       POSTGRES_PASSWORD: password # 任意のパスワードを設定
     volumes:
@@ -21,7 +21,8 @@ services:
       - "80:3000" # PCの80番ポートをコンテナの80番ポートに接続
     environment:
       RAILS_ENV: development
-      DATABASE_URL: postgres://postgres:password@db:5432/challecara2025_production
+      DATABASE_URL: postgis://postgres:password@db:5432/challecara2025_production
+    entrypoint: ["rails", "s", "-b", "0.0.0.0"] # <-- 元のサーバー起動コマンドに戻す
 
 volumes:
   postgres_data:

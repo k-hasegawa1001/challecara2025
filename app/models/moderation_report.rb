@@ -1,0 +1,2 @@
+class ModerationReport < ApplicationRecord
+end

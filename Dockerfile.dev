@@ -7,7 +7,7 @@ RUN apt-get update -qq && \
 
 WORKDIR /myapp
 
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile ./
 RUN bundle install
 
 # ここではコードをコピーしない（docker-composeで同期するため）
