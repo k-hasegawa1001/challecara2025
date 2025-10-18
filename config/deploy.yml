@@ -1,15 +1,8 @@
 # Name of your application. Used to uniquely configure containers.
-<<<<<<< HEAD
-service: rails_demo
-
-# Name of the container image.
-image: your-user/rails_demo
-=======
 service: challecara2025
 
 # Name of the container image.
 image: your-user/challecara2025
->>>>>>> 4c63380282d579f2cec115526c12520dc149bce3
 
 # Deploy to these servers.
 servers:
