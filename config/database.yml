@@ -1,6 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+<<<<<<< HEAD
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # ↓↓↓ DATABASE_URLがすべての接続情報を管理します ↓↓↓
   url: <%= ENV.fetch("DATABASE_URL") %>
@@ -15,3 +16,23 @@ production:
   <<: *default
   cable:
     <<: *default
+=======
+  username: postgres
+  password: 1122
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: challecara2025_development
+
+test:
+  <<: *default
+  database: challecara2025_test
+
+production:
+  <<: *default
+  database: challecara2025_production
+  username: admin
+  password: password
+>>>>>>> 4c63380282d579f2cec115526c12520dc149bce3
